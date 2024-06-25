@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(27, 27, 27);
+    color: aqua;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading{
+    margin: 10px;
+    text-decoration: underline 5px dotted ; 
+    font-weight: bolder;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.todo-input{
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 240px 155px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.todo-list {
+    display: grid;
+    grid-template-columns: 20px 210px 155px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    height: 35px;
+    align-items: center;
+}
+
+
+.date-input,
+.name-input{
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 6px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(255, 0, 0) 2px;
+}
+
+.name-input::placeholder,
+.date-input::placeholder{
+    color: rgb(88, 88, 88) ;
+}
+
+.add{
+    color: white;
+    background-color: green;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete{
+    color: white;
+    background-color: red;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+@media (max-width: 520px) and (min-width: 430px) {
+    .todo-input{
+        grid-template-columns:180px 150px 100px;
+        column-gap: 5px;
+    }    
+
+    .todo-list{
+        grid-template-columns: 20px 155px 150px 100px;
+        column-gap: 5px;
+    }
+}
+
+@media (max-width: 430px) and (min-width : 350px){
+    .todo-input{
+        grid-template-columns:150px 135px 60px;
+        column-gap: 5px;
+    }    
+
+    .todo-list{
+        grid-template-columns: 20px 125px 135px 60px;
+        column-gap: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .todo-input{
+        grid-template-columns:100px 110px 50px;
+        column-gap: 5px;
+    }    
+
+    .todo-list{
+        grid-template-columns: 20px 75px 110px 50px;
+        column-gap: 5px;
+    }
+}
